@@ -276,7 +276,7 @@ namespace DialogsSharp.Classes
 
         }
 
-        public static void CenterOnParent()
+        public static void CenterOnParent(IntPtr intPtr)
         {
             var yesButton = new TaskDialogButton("CloseTaskDialogButton", "Yes")
             {
@@ -290,7 +290,8 @@ namespace DialogsSharp.Classes
                 InstructionText = $"Would you like to continue?",
                 Icon = TaskDialogStandardIcon.Information,
                 Cancelable = false,
-                StartupLocation = TaskDialogStartupLocation.CenterOwner
+                StartupLocation = TaskDialogStartupLocation.CenterOwner,
+                OwnerWindowHandle = intPtr
             };
 
             dialog.Controls.Add(yesButton);
