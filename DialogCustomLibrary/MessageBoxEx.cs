@@ -12,45 +12,104 @@ namespace DialogCustomLibrary
         private static HookProc _hookProc;
         private static IntPtr _hHook;
 
+        /// <summary>
+        /// Display message with OK button
+        /// </summary>
+        /// <param name="text">Message to display</param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(string text)
         {
             Initialize();
+
             return MessageBox.Show(text);
         }
 
+        /// <summary>
+        /// Display message with OK button
+        /// </summary>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(string text, string caption)
         {
             Initialize();
+
             return MessageBox.Show(text, caption);
         }
 
+        /// <summary>
+        /// Display message with button options
+        /// </summary>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <param name="buttons"><see cref="MessageBoxButtons"/></param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons)
         {
             Initialize();
 
             return MessageBox.Show(text, caption, buttons);
         }
+
+        /// <summary>
+        /// Display message with button options and centers dialog on form
+        /// </summary>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <param name="buttons"><see cref="MessageBoxButtons"/></param>
+        /// <param name="owner">Caller</param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult ShowCenterOnParent(string text, string caption, MessageBoxButtons buttons, IWin32Window owner)
         {
             _owner = owner;
             Initialize();
+
             return MessageBox.Show(text, caption, buttons);
         }
+        /// <summary>
+        /// Display message with icon
+        /// </summary>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <param name="buttons"><see cref="MessageBoxButtons"/></param>
+        /// <param name="icon"><see cref="MessageBoxIcon"/></param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon)
         {
             Initialize();
+
             return MessageBox.Show(text, caption, buttons, icon);
         }
-
+        /// <summary>
+        /// Display message with default button using <see cref="MessageBoxDefaultButton"/>
+        /// </summary>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <param name="buttons"><see cref="MessageBoxButtons"/></param>
+        /// <param name="icon"><see cref="MessageBoxIcon"/></param>
+        /// <param name="defButton"><see cref="MessageBoxDefaultButton"/></param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defButton)
         {
             Initialize();
+
             return MessageBox.Show(text, caption, buttons, icon, defButton);
         }
 
+        /// <summary>
+        /// Display message with default button using <see cref="MessageBoxDefaultButton"/>
+        /// </summary>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <param name="buttons"><see cref="MessageBoxButtons"/></param>
+        /// <param name="icon"><see cref="MessageBoxIcon"/></param>
+        /// <param name="defButton"><see cref="MessageBoxDefaultButton"/></param>
+        /// <param name="options"><see cref="MessageBoxOptions"/></param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defButton, MessageBoxOptions options)
         {
             Initialize();
+
             return MessageBox.Show(text, caption, buttons, icon, defButton, options);
         }
 
@@ -58,30 +117,66 @@ namespace DialogCustomLibrary
         {
             _owner = owner;
             Initialize();
+
             return MessageBox.Show(owner, text);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="owner">Caller</param>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(IWin32Window owner, string text, string caption)
         {
             _owner = owner;
             Initialize();
+
             return MessageBox.Show(owner, text, caption);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="owner">Caller</param>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <param name="buttons"><see cref="MessageBoxButtons"/></param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(IWin32Window owner, string text, string caption, MessageBoxButtons buttons)
         {
             _owner = owner;
             Initialize();
+
             return MessageBox.Show(owner, text, caption, buttons);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="owner">Caller</param>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <param name="buttons"><see cref="MessageBoxButtons"/></param>
+        /// <param name="icon"><see cref="MessageBoxIcon"/></param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(IWin32Window owner, string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon)
         {
             _owner = owner;
             Initialize();
+
             return MessageBox.Show(owner, text, caption, buttons, icon);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="owner">Caller</param>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <param name="buttons"><see cref="MessageBoxButtons"/></param>
+        /// <param name="icon"><see cref="MessageBoxIcon"/></param>
+        /// <param name="defButton"><see cref="MessageBoxDefaultButton"/></param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(IWin32Window owner, string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defButton)
         {
             _owner = owner;
@@ -89,12 +184,22 @@ namespace DialogCustomLibrary
             return MessageBox.Show(owner, text, caption, buttons, icon, defButton);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="owner">Caller</param>
+        /// <param name="text">Message to display</param>
+        /// <param name="caption">caption for message box</param>
+        /// <param name="buttons"><see cref="MessageBoxButtons"/></param>
+        /// <param name="icon"><see cref="MessageBoxIcon"/></param>
+        /// <param name="defButton"><see cref="MessageBoxDefaultButton"/></param>
+        /// <param name="options"><see cref="MessageBoxOptions"/></param>
+        /// <returns><see cref="DialogResult"/></returns>
         public static DialogResult Show(IWin32Window owner, string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defButton, MessageBoxOptions options)
         {
             _owner = owner;
             Initialize();
-            return MessageBox.Show(owner, text, caption, buttons, icon,
-                                   defButton, options);
+            return MessageBox.Show(owner, text, caption, buttons, icon, defButton, options);
         }
 
         public delegate IntPtr HookProc(int nCode, IntPtr wParam, IntPtr lParam);
@@ -202,7 +307,7 @@ namespace DialogCustomLibrary
 
         private static void CenterWindow(IntPtr hChildWnd)
         {
-            Rectangle recChild = new Rectangle(0, 0, 0, 0);
+            var recChild = new Rectangle(0, 0, 0, 0);
             bool success = GetWindowRect(hChildWnd, ref recChild);
 
             int width = recChild.Width - recChild.X;
@@ -214,7 +319,8 @@ namespace DialogCustomLibrary
             var ptCenter = new Point(0, 0)
             {
                 X = recParent.X + ((recParent.Width - recParent.X) / 2),
-                Y = recParent.Y + ((recParent.Height - recParent.Y) / 2)};
+                Y = recParent.Y + ((recParent.Height - recParent.Y) / 2)
+            };
 
 
             var ptStart = new Point(0, 0)
@@ -226,8 +332,7 @@ namespace DialogCustomLibrary
             ptStart.X = (ptStart.X < 0) ? 0 : ptStart.X;
             ptStart.Y = (ptStart.Y < 0) ? 0 : ptStart.Y;
 
-            int result = MoveWindow(hChildWnd, ptStart.X, ptStart.Y, width,
-                                    height, false);
+            int result = MoveWindow(hChildWnd, ptStart.X, ptStart.Y, width, height, false);
         }
     }
 }
