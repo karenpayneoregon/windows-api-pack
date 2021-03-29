@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readme.md = readme.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C Sharp", "C Sharp", "{E74BD32C-92B1-4ACD-BFAB-4C68ECB7A30F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogsSharp", "DialogsSharp\DialogsSharp.csproj", "{634785F2-706C-4428-A285-505406A40253}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,12 +26,17 @@ Global
 		{E2DEC7FD-41BD-49E3-BFBC-D42C7A74E707}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2DEC7FD-41BD-49E3-BFBC-D42C7A74E707}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2DEC7FD-41BD-49E3-BFBC-D42C7A74E707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{634785F2-706C-4428-A285-505406A40253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634785F2-706C-4428-A285-505406A40253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634785F2-706C-4428-A285-505406A40253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634785F2-706C-4428-A285-505406A40253}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E2DEC7FD-41BD-49E3-BFBC-D42C7A74E707} = {FB4E2A93-9424-43C9-B943-75B0EF830468}
+		{634785F2-706C-4428-A285-505406A40253} = {E74BD32C-92B1-4ACD-BFAB-4C68ECB7A30F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11EFA8B3-44D3-422F-8006-C893A4C1695B}
